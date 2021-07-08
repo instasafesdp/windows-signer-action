@@ -17,7 +17,7 @@ echo "--> signing binary"
 
 
 ## declare an array variable
-declare -a array=($@)
+declare -a array=(${BINARY})
 
 
 
