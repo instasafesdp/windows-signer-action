@@ -10,8 +10,8 @@ fi
 echo "--> outputting cert and key to files"
 mkdir /certs
 # The quotations around the cert/key vars are very import to handle line breaks
-echo "${WINDOWS_CERT}" > /certs/bundle.crt
-echo "${WINDOWS_KEY}" > /certs/codesign.key
+echo "${WINDOWS_CERT}" | base64 -d > /certs/bundle.crt
+echo "${WINDOWS_KEY}" | base64 -d > /certs/codesign.key
 
 echo "--> signing binary"
 
