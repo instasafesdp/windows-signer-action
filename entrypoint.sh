@@ -13,6 +13,9 @@ mkdir /certs
 echo "${WINDOWS_CERT}" | base64 -d > /certs/bundle.crt
 echo "${WINDOWS_KEY}" | base64 -d > /certs/codesign.key
 
+echo /certs/bundle.crt
+echo /certs/codesign.key
+
 echo "--> signing binary"
 
 
