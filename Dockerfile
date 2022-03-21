@@ -9,6 +9,8 @@ LABEL "com.github.actions.description"="Windows Signing Utility"
 LABEL "com.github.actions.icon"="key"
 LABEL "com.github.actions.color"="green"
 
+RUN apt-get install libgsf-1-dev -y
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 
