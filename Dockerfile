@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN dpkg --add-architecture i386
 RUN sed -i "s/main/main contrib non-free/" etc/apt/sources.list
-RUN apt-get update && apt-get install -yq wine curl unrar unzip libcurl4-openssl-dev autoconf gcc make libssl-dev p7zip-full || apt-get install -yq wine curl unrar unzip libcurl4-openssl-dev autoconf gcc make libssl-dev p7zip-full || apt-get install -yq wine curl unrar unzip libcurl4-openssl-dev autoconf gcc make libssl-dev p7zip-full
+RUN apt-get update && apt-get install -yq curl libcurl4-openssl-dev autoconf gcc make libssl-dev || apt-get install -yq curl libcurl4-openssl-dev autoconf gcc make libssl-dev || apt-get install -yq curl libcurl4-openssl-dev autoconf gcc make libssl-dev
 
 # # innosetup
 # RUN mkdir innosetup && \
@@ -28,7 +28,7 @@ RUN mkdir /osslsigncode && \
 
 LABEL "name"="Windows Signing Utility"
 LABEL "maintainer"="Jon Friesen"
-LABEL "version"="1.0.0"
+LABEL "version"="1.1.0"
 
 LABEL "com.github.actions.name"="Windows Signing Utility"
 LABEL "com.github.actions.description"="Windows Signing Utility"

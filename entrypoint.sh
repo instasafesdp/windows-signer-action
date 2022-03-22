@@ -32,7 +32,7 @@ do
 
   #osslsigncode sign -pkcs12 <pfx-file> -pass <pfx-password> -n "Your Application" -i http://www.yourwebsite.com/ -in yourapp.exe -out yourapp-signed.exe
   
-  /osslsigncode/osslsigncode-1.7.1/osslsigncode sign -pkcs12 /certs/bundle.crt -pass $WINDOWS_PASS -h sha256 -n ${NAME} -i ${DOMAIN} -t "http://timestamp.digicert.com" -in ${array[$i]} -out /signedbinary
+  /osslsigncode/osslsigncode-2.3.0/osslsigncode sign -pkcs12 /certs/bundle.crt -pass $WINDOWS_PASS -h sha256 -n ${NAME} -i ${DOMAIN} -t "http://timestamp.digicert.com" -in ${array[$i]} -out /signedbinary
 
   echo "--> overwriting existing binary with signed binary"
   cp /signedbinary ${array[$i]}
