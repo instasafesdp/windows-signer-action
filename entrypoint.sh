@@ -35,7 +35,7 @@ do
   /osslsigncode/osslsigncode-2.3.0/osslsigncode sign -pkcs12 /certs/bundle.crt -pass $WINDOWS_PASS -h sha256 -n ${NAME} -i ${DOMAIN} -t "http://timestamp.digicert.com" -in ${array[$i]} -out /signedbinary
 
   echo "--> overwriting existing binary with signed binary"
-  cp /signedbinary ${array[$i]}
+  mv /signedbinary ${array[$i]}
 
 
 done

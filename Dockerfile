@@ -28,7 +28,7 @@ RUN mkdir /osslsigncode && \
 
 LABEL "name"="Windows Signing Utility"
 LABEL "maintainer"="Jon Friesen"
-LABEL "version"="1.1.0"
+LABEL "version"="1.1.1"
 
 LABEL "com.github.actions.name"="Windows Signing Utility"
 LABEL "com.github.actions.description"="Windows Signing Utility"
