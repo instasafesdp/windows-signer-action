@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:bullseye
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -28,7 +28,7 @@ RUN mkdir /osslsigncode && \
 
 LABEL "name"="Windows Signing Utility"
 LABEL "maintainer"="Jon Friesen"
-LABEL "version"="0.2.0"
+LABEL "version"="1.0.0"
 
 LABEL "com.github.actions.name"="Windows Signing Utility"
 LABEL "com.github.actions.description"="Windows Signing Utility"
