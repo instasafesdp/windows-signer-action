@@ -20,15 +20,15 @@ RUN apt-get update && apt-get install libgsf-1-dev -y
 
 RUN mkdir /osslsigncode && \
     cd /osslsigncode && \
-    curl -fsSL -o osslsigncode-1.7.1.tar.gz "http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz?r=&ts=1469050502&use_mirror=skylineservers" && \
-    tar -xzf osslsigncode-1.7.1.tar.gz && \
-    cd osslsigncode-1.7.1 && \
+    curl -fsSL -o osslsigncode-2.3.0.tar.gz "https://github.com/mtrojnar/osslsigncode/releases/download/2.3/osslsigncode-2.3.0.tar.gz" && \
+    tar -xzf osslsigncode-2.3.0.tar.gz && \
+    cd osslsigncode-2.3.0 && \
     ./configure && \
     make
 
 LABEL "name"="Windows Signing Utility"
 LABEL "maintainer"="Jon Friesen"
-LABEL "version"="0.1.0"
+LABEL "version"="0.2.0"
 
 LABEL "com.github.actions.name"="Windows Signing Utility"
 LABEL "com.github.actions.description"="Windows Signing Utility"
